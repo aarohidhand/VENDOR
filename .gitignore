@@ -1,0 +1,22 @@
+# environments / tooling
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+
+# local secrets: never commit API keys
+.env
+.env.*
+
+# run outputs and caches (the released dataset in data/ IS tracked)
+/out/
+/.cache/
+/data/raw/
+/data/canonical/
+/data/extracted/
+
+# editor-local files
+/.vscode/
+/.idea/
+.DS_Store
