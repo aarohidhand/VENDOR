@@ -127,5 +127,4 @@ compliance matrix, the rankings, `best_available`, the actions, the turn counts,
 outcome with its reason. None of those depend on the literal supplier name; they depend on the
 numeric and categorical constraint values and on the join keys, all of which are
 intact. What differs is the model authored wording, because a fresh call now sees a
-token where a company name used to be. That is the right trade: what the dataset is
-used for is reproduced exactly, and only the cosmetic phrasing moves.
+token where a company name used to be.
