@@ -171,30 +171,6 @@ from the deterministic template rather than the model, covering 187 turns (6.8% 
 turns). They carry a `template_fallback` qa_flag. The facts in such a turn are the same
 code built facts; only the phrasing differs.
 
-## Known issues
-
-1. **Wording fallback.** Repeated from above because it is the one thing worth deciding
-   before you train on this: 160 dialogues carry a `template_fallback` qa_flag on at
-   least one turn (117 train, 20 validation, 23 test). The facts in such a turn are the
-   same code built facts and the labels are unaffected; only the phrasing is
-   deterministic. They are kept in the dataset. Drop them yourself if your task needs
-   model authored wording only, which leaves 383 / 53 / 119.
-
-2. **Two provenance spellings for one model.** `provenance.llm_model` reads
-   `google/gemma-4-26b-a4b-it:free` for 555 dialogues and `gemma-4-26b-a4b-it` for 160,
-   with `llm_backend` `openrouter` and `google` respectively. Both are the same model
-   reached by two routes.
-
-3. **Calibration is a target, not a property.** Repeated from above, because the tier
-   label is easy to misread: the per tier feasibility bands in `config/settings.yaml` are
-   what the scenario builder aimed at, and only 164 of 715 scenarios land inside their
-   band. The tier is the persona's hardness setting, not a measured difficulty.
-
-4. **Two contact details removed from the bid side file.** One buyer email address and
-   one consignee telephone number (attribute `consignee_contact_no`) were removed from
-   `final_constraints.csv`. Neither string occurs in any dialogue file, and
-   `consignee_contact_no` is never a dialogue requirement, so no dialogue, ranking or
-   figure here depends on either.
 
 ## If you split again
 
