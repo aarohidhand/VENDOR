@@ -242,10 +242,3 @@ rule, and no `Dxxx` tag is needed to read the code. `config/settings.yaml` is th
 place where every threshold, gate, ladder and weight lives, and the code reads them from
 there rather than hardcoding them.
 
-## Scope of this snapshot
-
-Deliberately not included: the benchmarking and evaluation code and its results, the
-human verification protocol, and the internal design notes and audit reports. The
-pipeline and the dataset are the released artifacts. Earlier prompt versions are also
-left out: only the 16 versions recorded in `provenance.prompt_versions` for the released
-run are here, which is what the pipeline resolves to by default.
